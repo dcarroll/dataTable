@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="dataTableController" >
+    <aura:attribute name="flowNameLookup" type="String" />
+    <aura:attribute name="fsName" type="String" />
+    <aura:attribute name="fActions" type="String" />
+    <aura:attribute name="oName" type="String" />
+    <aura:attribute name="records" type="Object" />
+    <aura:attribute name="myColumns" type="List" />
+    <aura:attribute name="columnsString" type="String" />
+    <aura:attribute name="titleString" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <lightning:card title="{!v.titleString}" class="slds-card_boundary">
+    
+        <lightning:datatable aura:id="entries"
+                             data="{!v.records}"
+                             columns="{!v.myColumns}"
+                             keyField="Id"
+                             hideCheckboxColumn="true"
+                             onrowaction="{!c.doAction}"
+                             />
+        
+    </lightning:card>
+</aura:component>

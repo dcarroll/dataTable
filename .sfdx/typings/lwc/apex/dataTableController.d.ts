@@ -1,0 +1,9 @@
+declare module "@salesforce/apex/dataTableController.listForLightning" {
+  export default function listForLightning(param: {flowName: any, recordId: any}): Promise<any>;
+}
+declare module "@salesforce/apex/dataTableController.actionForLightning" {
+  export default function actionForLightning(param: {flowName: any, recordId: any, selectedRecordId: any}): Promise<any>;
+}
+declare module "@salesforce/apex/dataTableController.getFieldsFromFieldSet" {
+  export default function getFieldsFromFieldSet(param: {fsName: any, oName: any, fActions: any}): Promise<any>;
+}
