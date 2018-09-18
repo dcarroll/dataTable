@@ -8,7 +8,7 @@
     <aura:attribute name="columnsString" type="String" />
     <aura:attribute name="recordId" type="String" />
     <aura:attribute name="titleString" type="String" />
-    <aura:handler name="init" value="{!this}" action="{!c.secondaryInit}" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
 
     <lightning:navigation aura:id="navService"/> 
 
