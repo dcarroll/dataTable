@@ -1,6 +1,6 @@
 ({
 
-    init: function(component, helper) {
+    init: function(component, event, helper) {
         helper.getData(component);
     },
     
