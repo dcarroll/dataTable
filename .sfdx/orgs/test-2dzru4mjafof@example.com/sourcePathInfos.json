@@ -60,15 +60,15 @@
     [
         "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable",
         {
+            "state": "u",
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable",
             "isDirectory": true,
-            "size": 448,
-            "modifiedTime": 1537301117648,
-            "changeTime": 1537301117648,
-            "contentHash": "0d9ce4ac5be10b8d7d5312c17d8ed1e4b339b708",
             "isMetadataFile": false,
-            "state": "u",
-            "isWorkspace": true
+            "size": 480,
+            "modifiedTime": 1537307412549,
+            "changeTime": 1537307412549,
+            "isWorkspace": true,
+            "contentHash": "a4e067daec30b4f53f7a2377f416314b93726929"
         }
     ],
     [
@@ -508,15 +508,15 @@
     [
         "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/aura/dataTable/dataTableController.js",
         {
-            "state": "u",
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/aura/dataTable/dataTableController.js",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 440,
             "modifiedTime": 1537307271133,
             "changeTime": 1537307271133,
-            "isWorkspace": false,
-            "contentHash": "26fb6a62fbecce7b10f49a8ce6b6fc71016e45e0"
+            "contentHash": "26fb6a62fbecce7b10f49a8ce6b6fc71016e45e0",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -725,16 +725,15 @@
     [
         "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/activeContacts_Opportunity-1.flow",
         {
+            "state": "u",
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/activeContacts_Opportunity-1.flow",
             "isDirectory": false,
-            "size": 2858,
-            "modifiedTime": 1537202001930,
-            "changeTime": 1537202001930,
-            "contentHash": "e1a1170a76f076b8e8cf70e392815ce33ae4a400",
             "isMetadataFile": false,
-            "state": "u",
+            "size": 2617,
+            "modifiedTime": 1537307994464,
+            "changeTime": 1537307994464,
             "isWorkspace": false,
-            "isArtifactRoot": false
+            "contentHash": "34db23ff476d6699c8daa88437157d6d245cd277"
         }
     ],
     [

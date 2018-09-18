@@ -10,9 +10,9 @@
     <aura:handler name="init" value="{!this}" action="{!c.init}" />
 
     <lightning:card title="{!v.titleString}" class="slds-card_boundary">
-        
-        <lightning:button onclick="{!c.dumpColumns}" label="Dump Columns" />
-        <lightning:button onclick="{!c.dumpData}" label="Dump Data" />
+
+        <lightning:button onclick="{!c.dumpColumns}" label="View Columns" />
+        <lightning:button onclick="{!c.dumpData}" label="View Data" />
 
         <lightning:datatable aura:id="entries"
                              data="{!v.records}"

@@ -25,12 +25,7 @@
         </filters>
         <object>Contact</object>
         <outputReference>records</outputReference>
-        <queriedFields>FirstName</queriedFields>
-        <queriedFields>LastName</queriedFields>
         <queriedFields>Id</queriedFields>
-        <queriedFields>Email</queriedFields>
-        <queriedFields>Phone</queriedFields>
-        <queriedFields>ContactLink__c</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>flOpp</name>
