@@ -10,7 +10,6 @@ global class FlowPickList extends VisualEditor.DynamicPickList{
         return [Select DeveloperName, MasterLabel From LookupFlows__mdt];
     }
     global override VisualEditor.DynamicPickListRows getValues() {
-        // Schema.DescribeFieldResult p = PickTest__mdt.Flows__c.getDescribe();
         VisualEditor.DynamicPickListRows  myValues = new VisualEditor.DynamicPickListRows();
         myValues = new VisualEditor.DynamicPickListRows();
         for (LookupFlows__mdt lookupFlow : this.getLookupFlows()) {

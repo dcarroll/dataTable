@@ -1,5 +1,5 @@
 ({
-    getData : function(component, event, helper) {
+    getData : function(component) {
         var action = component.get("c.listForLightningWithColumns");
         console.log(component.get('v.fActions'));
         action.setParams({
@@ -23,4 +23,25 @@
         }); 
         $A.enqueueAction(action);
     },
+
+    doAction : function(component, event) {
+		var action = component.get('c.actionForLightning');
+        action.setParams({
+            recordId : component.get('v.recordId'),
+            selectedRecordId : event.getParam('row').Id,
+            flowName : event.getParam('action').name
+        });
+        action.setCallback(this, $A.getCallback(function (response) {
+        	var state = response.getState();
+            if(state === "SUCCESS"){
+            	component.set('v.records',response.getReturnValue());
+        		this.getData(component);
+        	} else if (state === "ERROR") {
+                var errors = response.getError();
+                console.error(errors);
+            }
+    	}));
+    	$A.enqueueAction(action);
+    },
+
 })

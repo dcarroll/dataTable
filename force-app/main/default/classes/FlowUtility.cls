@@ -1,5 +1,117 @@
 public with sharing class FlowUtility {
     
+    public DynamicResults disassembleSObjects(List<SObject> objects, String fActions) {
+        Schema.SObjectType objType = objects.getSObjectType();
+        Map<String, Schema.SObjectField> fields = objType.getDescribe().fields.getMap();
+        List<Object> jsonRecords = toJSONList(objects);
+
+        Map<String, NameField> nameFields = getNameFields(objects[0], fields);
+        if (objects.size() > 0) {
+            List<Column> cols = getColumns(objects[0], fields);
+            List<Map<String, Object>> JSONCols = new List<Map<String, Object>>();
+            if (fActions != null) {
+                addActionsToColumns(cols, fActions);
+            }
+
+            for (Column col : cols) {
+                Map<String, Object> jsonCol = (Map<String, Object>)JSON.deserializeUntyped(JSON.serialize(col));
+                if (nameFields.containsKey(col.fieldName)) {
+                    // We need to create a fake field in the data so that the column can reference it
+                    // We also need to add the reference to those fields in the columns
+                    NameField namefield = nameFields.get(col.fieldName);
+                    jsonCol.put('typeAttributes', new Map<String, Object>());
+                    Map<String, Object> typeAttributes = (Map<String, Object>)jsonCol.get('typeAttributes');
+                    typeAttributes.put('label', new Map<String, Object>());
+                    Map<String, Object> label = (Map<String, Object>)typeAttributes.get('label');
+
+                    if (namefield.type != 'REFERENCE') {
+                        label.put('fieldName', col.fieldName);
+                    } else {
+                        label.put('fieldName', 'Link_' + col.fieldName + '_Name');
+                    }
+
+                    jsonCol.put('fieldName', 'Link_' + col.fieldName);
+                    jsonCol.put('type', 'url');
+
+                    this.addLinkFieldToJSONSobjects(jsonRecords, 'Link_' + col.fieldName, namefield);
+                }
+                JSONCols.add(jsonCol);
+            }
+            this.lookupReferenceNames(jsonRecords, nameFields, JSONCols);
+            return new DynamicResults(jsonRecords, JSONCols);
+        }
+        return null;
+    }
+
+    public string validateFieldList(string sobjectType, string fieldList) {
+        // Get describe for passed in sobject type name
+        Schema.DescribeSObjectResult[] descResults = Schema.describeSObjects(new String[]{sobjectType});
+
+        // Convert the fieldlist keys to lower case
+        Map<String, String> lcaseFieldList = new Map<String, String>();
+        List<String> invalidFields = new List<String>();
+
+        // Make sure that we have valid describe results
+        if (descResults != null && descResults.size() > 0) {
+            Schema.DescribeSObjectResult descResult = descResults[0];
+
+            // Get a map of the fields on the sobject
+            Map<String, Schema.SObjectField> fields = descResult.fields.getMap();
+
+            // Convert to lower case so that we have a case insensitive comparison
+            for (String key : fields.keySet()) {
+                lcaseFieldList.put(fields.get(key).getDescribe().getName().toLowerCase(), key);
+            }
+
+            // Turn the field list to validate into an array
+            List<String> flist = fieldList.split(',');
+
+            for (String fname : flist) {
+                // Look to see if the field name is a key in the case insensitive map,
+                // if it isn't, then add it to the list of invaled fields to be returned
+                // to the colling code.
+                if (!lcaseFieldList.containsKey(fname.toLowerCase())) {
+                    invalidFields.add(fname);
+                }
+            }
+        }
+        return JSON.serialize(invalidFields);
+    }
+    
+    // Schema.FieldSetMember[ getDbRequired=false; getFieldPath=AccountId; getLabel=Account ID; getRequired=false; getType=REFERENCE;]
+    public List<String> getFieldListFromFieldSet(string sobjectType, string fieldSetName) {
+        Schema.DescribeSObjectResult[] descResults = Schema.describeSObjects(new String[]{sobjectType});
+        if (descResults.size() > 0) {
+
+            DescribeSObjectResult descResult = descResults[0];
+            FieldSet fieldSet = descResult.fieldsets.getMap().get(fieldSetName);
+            
+            if (fieldSet == null) {
+                return null; // '{ error: "Fieldset ' + fieldSetName + ' not found" }';
+            } else {
+                List<FieldSetMember> fields = fieldSet.getFields();
+                List<String> fieldNames = new List<String>();
+            
+                for (FieldSetMember field : fields) {
+                    fieldNames.add(field.fieldpath);
+                }
+                return fieldNames;
+            }
+        } else {
+            return null;
+        }
+    }
+    
+    public List<String> getFieldListFromFieldSetFromSObjectList(List<SObject> sobjects, string fieldSetName) {
+        Schema.SObjectType objType = sobjects.getSObjectType();
+        return getFieldListFromFieldSet(objType.getDescribe().localname, fieldSetName);
+    }
+
+    public void jsonTest() {
+        List<SObject> objects = [Select Id, Name, Email From Contact Limit 2];
+        System.debug('-  \n\n' + disassembleSObjects(objects, null) + '\n\n');
+    }
+
     private void addFieldToJSONObject(Map<String, Object> jsonObject, String fieldNameToAdd, Object valueToAdd) {
         jsonObject.put(fieldNameToAdd, valueToAdd);
     }
@@ -134,49 +246,6 @@ public with sharing class FlowUtility {
         }
     }
 
-    public DynamicResults disassembleSObjects(List<SObject> objects, String fActions) {
-        Schema.SObjectType objType = objects.getSObjectType();
-        Map<String, Schema.SObjectField> fields = objType.getDescribe().fields.getMap();
-        List<Object> jsonRecords = toJSONList(objects);
-
-        Map<String, NameField> nameFields = getNameFields(objects[0], fields);
-        if (objects.size() > 0) {
-            List<Column> cols = getColumns(objects[0], fields);
-            List<Map<String, Object>> JSONCols = new List<Map<String, Object>>();
-            if (fActions != null) {
-                addActionsToColumns(cols, fActions);
-            }
-
-            for (Column col : cols) {
-                Map<String, Object> jsonCol = (Map<String, Object>)JSON.deserializeUntyped(JSON.serialize(col));
-                if (nameFields.containsKey(col.fieldName)) {
-                    // We need to create a fake field in the data so that the column can reference it
-                    // We also need to add the reference to those fields in the columns
-                    NameField namefield = nameFields.get(col.fieldName);
-                    jsonCol.put('typeAttributes', new Map<String, Object>());
-                    Map<String, Object> typeAttributes = (Map<String, Object>)jsonCol.get('typeAttributes');
-                    typeAttributes.put('label', new Map<String, Object>());
-                    Map<String, Object> label = (Map<String, Object>)typeAttributes.get('label');
-
-                    if (namefield.type != 'REFERENCE') {
-                        label.put('fieldName', col.fieldName);
-                    } else {
-                        label.put('fieldName', 'Link_' + col.fieldName + '_Name');
-                    }
-
-                    jsonCol.put('fieldName', 'Link_' + col.fieldName);
-                    jsonCol.put('type', 'url');
-
-                    this.addLinkFieldToJSONSobjects(jsonRecords, 'Link_' + col.fieldName, namefield);
-                }
-                JSONCols.add(jsonCol);
-            }
-            this.lookupReferenceNames(jsonRecords, nameFields, JSONCols);
-            return new DynamicResults(jsonRecords, JSONCols);
-        }
-        return null;
-    }
-
     private void addActionsToColumns(List<Column> columns, String fActions) {
         if(fActions != Null){
             LIST<String> flowActions = fActions.split(',');
@@ -193,71 +262,20 @@ public with sharing class FlowUtility {
             return;
         }
     }
-
-    public string validateFieldList(string sobjectType, string fieldList) {
-        // Get describe for passed in sobject type name
-        Schema.DescribeSObjectResult[] descResults = Schema.describeSObjects(new String[]{sobjectType});
-
-        // Convert the fieldlist keys to lower case
-        Map<String, String> lcaseFieldList = new Map<String, String>();
-        List<String> invalidFields = new List<String>();
-
-        // Make sure that we have valid describe results
-        if (descResults != null && descResults.size() > 0) {
-            Schema.DescribeSObjectResult descResult = descResults[0];
-
-            // Get a map of the fields on the sobject
-            Map<String, Schema.SObjectField> fields = descResult.fields.getMap();
-
-            // Convert to lower case so that we have a case insensitive comparison
-            for (String key : fields.keySet()) {
-                lcaseFieldList.put(fields.get(key).getDescribe().getName().toLowerCase(), key);
-            }
-
-            // Turn the field list to validate into an array
-            List<String> flist = fieldList.split(',');
-
-            for (String fname : flist) {
-                // Look to see if the field name is a key in the case insensitive map,
-                // if it isn't, then add it to the list of invaled fields to be returned
-                // to the colling code.
-                if (!lcaseFieldList.containsKey(fname.toLowerCase())) {
-                    invalidFields.add(fname);
-                }
-            }
-        }
-        return JSON.serialize(invalidFields);
-    }
     
-    // Schema.FieldSetMember[ getDbRequired=false; getFieldPath=AccountId; getLabel=Account ID; getRequired=false; getType=REFERENCE;]
-    public List<String> getFieldListFromFieldSet(string sobjectType, string fieldSetName) {
-        Schema.DescribeSObjectResult[] descResults = Schema.describeSObjects(new String[]{sobjectType});
-        if (descResults.size() > 0) {
+    public class Column {
+        String fieldName;
+        String label;
+        String type;
+        Object typeAttributes;
 
-            DescribeSObjectResult descResult = descResults[0];
-            FieldSet fieldSet = descResult.fieldsets.getMap().get(fieldSetName);
-            
-            if (fieldSet == null) {
-                return null; // '{ error: "Fieldset ' + fieldSetName + ' not found" }';
-            } else {
-                List<FieldSetMember> fields = fieldSet.getFields();
-                List<String> fieldNames = new List<String>();
-            
-                for (FieldSetMember field : fields) {
-                    fieldNames.add(field.fieldpath);
-                }
-                return fieldNames;
-            }
-        } else {
-            return null;
+        private Column(String fldName, String lbl, String fldType) {
+            fieldName = fldName;
+            label = lbl;
+            type = fldType;
         }
     }
-    
-    public List<String> getFieldListFromFieldSetFromSObjectList(List<SObject> sobjects, string fieldSetName) {
-        Schema.SObjectType objType = sobjects.getSObjectType();
-        return getFieldListFromFieldSet(objType.getDescribe().localname, fieldSetName);
-    }
-    
+
     public class CustomError {
         String error;
 
@@ -277,11 +295,6 @@ public with sharing class FlowUtility {
         }
     }
     
-    public void jsonTest() {
-        List<SObject> objects = [Select Id, Name, Email From Contact Limit 2];
-        System.debug('-  \n\n' + disassembleSObjects(objects, null) + '\n\n');
-    }
-
     private class NameField {
         String name;
         String type;
@@ -292,56 +305,5 @@ public with sharing class FlowUtility {
             type = t;
             objectType = sobjType;
         }
-    }
-
-    private class InnerFieldNameAtt {
-        String fieldName;
-
-        private InnerFieldNameAtt(String innerFieldName) {
-            fieldName = innerFieldName;
-        }
-    }
-
-      /*    { 
-                "type": "action", "typeAttributes": {
-                    "rowActions": ['
-                        { 
-                            "label": "MasterLabel",
-                            "name": "DeveloperName"
-                        },
-                    ]
-                }
-            }  */
-
-    public class ActionsColumn {
-        String type;
-        Map<String, Object> typeAttributes;
-
-        public ActionsColumn(Map<String, String> actions) {
-            List<Map<String, Object>> rowActions = new List<Map<String, Object>>();
-            
-            typeAttributes.put('rowActions', rowActions);
-            
-            for (String key : actions.keySet()) {
-                Map<String, String> actionName = new Map<String, String> { 'name' => key };
-                Map<String, String> actionLabel = new Map<String, String> { 'label' => actions.get(key) };
-                rowActions.add(actionName);
-                rowActions.add(actionLabel);
-            }
-        }
-    }
-
-    public class Column {
-        String fieldName;
-        String label;
-        String type;
-        Object typeAttributes;
-
-        private Column(String fldName, String lbl, String fldType) {
-            fieldName = fldName;
-            label = lbl;
-            type = fldType;
-        }
-    }
-    
+    }    
 }

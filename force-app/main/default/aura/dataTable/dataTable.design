@@ -3,5 +3,5 @@
     <design:attribute name="titleString" label="Title" default="Active Contact List" />
     <design:attribute required="true" name="fsName" label="Field Set Name" datasource="apex://FieldSetPickList" />
     <design:attribute required="true" name="oName" label="Object Name" default="Contact" />
-    <design:attribute name="fActions" label="Flow Actions (try activeContacts_Opportunity or activeContacts_Case)" />
+    <design:attribute name="fActions" label="Flow Actions (addToOppContacts or deactivateContact)" />
 </design:component>
