@@ -1,7 +1,7 @@
 <design:component>
     <design:attribute required="true" name="flowNameLookup" datasource="apex://FlowPickList" label="Flow Name - Lookup Records" default="activeContacts_Opportunity"/>
-    <design:attribute name="titleString" label="Title" />
+    <design:attribute name="titleString" label="Title" default="Active Contact List" />
     <design:attribute required="true" name="fsName" label="Field Set Name" datasource="apex://FieldSetPickList" />
-    <design:attribute required="true" name="oName" label="Object Name" />
-    <design:attribute name="fActions" label="Flow Actions" />
+    <design:attribute required="true" name="oName" label="Object Name" default="Contact" />
+    <design:attribute name="fActions" label="Flow Actions (try activeContacts_Opportunity or activeContacts_Case)" />
 </design:component>
