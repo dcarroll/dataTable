@@ -6,10 +6,17 @@
     <aura:attribute name="records" type="Object" />
     <aura:attribute name="myColumns" type="List" />
     <aura:attribute name="columnsString" type="String" />
+    <aura:attribute name="recordId" type="String" />
     <aura:attribute name="titleString" type="String" />
-    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:handler name="init" value="{!this}" action="{!c.secondaryInit}" />
+
+    <lightning:navigation aura:id="navService"/> 
+
+
     <lightning:card title="{!v.titleString}" class="slds-card_boundary">
-    
+        <lightning:button onclick="{!c.dumpColumns}" label="Dump Columns" />
+        <lightning:button onclick="{!c.dumpData}" label="Dump Data" />
+
         <lightning:datatable aura:id="entries"
                              data="{!v.records}"
                              columns="{!v.myColumns}"

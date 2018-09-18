@@ -39,12 +39,16 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
+                <name>fActions</name>
+                <value>addToOppContacts,deactivateContact</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>flowNameLookup</name>
-                <value>Active Contacts - Opportunity</value>
+                <value>activeContacts_Opportunity</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>fsName</name>
-                <value>Short_Form</value>
+                <value>Long_Form</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>oName</name>
@@ -66,7 +70,7 @@
         <componentInstances>
             <componentInstanceProperties>
                 <name>active</name>
-                <value>true</value>
+                <value>false</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>body</name>
@@ -101,6 +105,10 @@
             <componentName>flexipage:tab</componentName>
         </componentInstances>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>active</name>
+                <value>true</value>
+            </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>body</name>
                 <value>Facet-1dae18fd-be5b-478d-b0ac-2025733ac75c</value>

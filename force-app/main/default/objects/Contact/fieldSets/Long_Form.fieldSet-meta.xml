@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Short_Form</fullName>
-    <availableFields>
-        <field>AccountId</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <description>Data Table</description>
+    <fullName>Long_Form</fullName>
+    <description>For demo</description>
     <displayedFields>
         <field>Name</field>
         <isFieldManaged>false</isFieldManaged>
@@ -22,5 +17,10 @@
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>
-    <label>Short Form</label>
+    <displayedFields>
+        <field>AccountId</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Long Form</label>
 </FieldSet>

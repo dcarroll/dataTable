@@ -4,10 +4,10 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app",
             "isDirectory": true,
-            "size": 96,
-            "modifiedTime": 1537202056427,
-            "changeTime": 1537202256789,
-            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "size": 128,
+            "modifiedTime": 1537207024657,
+            "changeTime": 1537207024657,
+            "contentHash": "51d86f3b64a3d9a0048d192f02147b0e9e9594e4",
             "isMetadataFile": false,
             "state": "u",
             "isWorkspace": false,
@@ -19,10 +19,10 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main",
             "isDirectory": true,
-            "size": 96,
-            "modifiedTime": 1537202056427,
-            "changeTime": 1537202056427,
-            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "size": 128,
+            "modifiedTime": 1537207024651,
+            "changeTime": 1537207024651,
+            "contentHash": "ae41ed56706e4439a34cda97ac997d7988935c2f",
             "isMetadataFile": false,
             "state": "u",
             "isWorkspace": false,
@@ -32,14 +32,14 @@
     [
         "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default",
         {
-            "state": "u",
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default",
             "isDirectory": true,
+            "size": 384,
+            "modifiedTime": 1537289763787,
+            "changeTime": 1537289763787,
+            "contentHash": "4dece5cba30790d297fecbd771f4c7c155d1eb5d",
             "isMetadataFile": false,
-            "size": 320,
-            "modifiedTime": 1537208149456,
-            "changeTime": 1537208149456,
-            "contentHash": "4c147a3f7153385287d3c63714832e4f8f27b61b"
+            "state": "u"
         }
     ],
     [
@@ -47,10 +47,10 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/aura",
             "isDirectory": true,
-            "size": 64,
-            "modifiedTime": 1537202056427,
-            "changeTime": 1537202056427,
-            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "size": 128,
+            "modifiedTime": 1537207092422,
+            "changeTime": 1537207092422,
+            "contentHash": "533f814f9395fd28a28ee9e35a035a50d08c54ad",
             "isMetadataFile": false,
             "state": "u",
             "isWorkspace": false,
@@ -62,14 +62,13 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable",
             "isDirectory": true,
-            "size": 544,
-            "modifiedTime": 1537206531379,
-            "changeTime": 1537206531379,
-            "contentHash": "f95e4d642dded6d6542cb46d5aa7f799da107fd7",
+            "size": 384,
+            "modifiedTime": 1537233364332,
+            "changeTime": 1537233364332,
+            "contentHash": "a638b0601464b398e9031071f71fef7c97c41d8a",
             "isMetadataFile": false,
             "state": "u",
-            "isWorkspace": true,
-            "isArtifactRoot": false
+            "isWorkspace": true
         }
     ],
     [
@@ -77,12 +76,13 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes",
             "isDirectory": true,
-            "size": 192,
-            "modifiedTime": 1537207345943,
-            "changeTime": 1537207345943,
-            "contentHash": "29b4cc2262b42064aa1245ca5f653e332b2b52ca",
+            "size": 384,
+            "modifiedTime": 1537294117051,
+            "changeTime": 1537294117051,
+            "contentHash": "f8463387f762bfb31c0b5d166fa10a54802aca4e",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -90,10 +90,10 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata",
             "isDirectory": true,
-            "size": 256,
-            "modifiedTime": 1537207345956,
-            "changeTime": 1537207345956,
-            "contentHash": "b4d5beb0f2deed504d6b2c314c0fbb3f9e9d5a24",
+            "size": 320,
+            "modifiedTime": 1537289763795,
+            "changeTime": 1537289763795,
+            "contentHash": "a1d79c64646d842e8700bee95d5b53d664b98c54",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -108,7 +108,9 @@
             "changeTime": 1537207345971,
             "contentHash": "37efeb1474e27bd5ab929263880eec09523da785",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -116,10 +118,10 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/layouts",
             "isDirectory": true,
-            "size": 128,
-            "modifiedTime": 1537207345972,
-            "changeTime": 1537207345972,
-            "contentHash": "2b213681aa79f66ad2daa19aa7ddb5d27a5d23f1",
+            "size": 192,
+            "modifiedTime": 1537289763781,
+            "changeTime": 1537289763781,
+            "contentHash": "b15d58b4a1ab2201a9332a3a10050c3f6f4a717b",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -127,27 +129,29 @@
     [
         "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects",
         {
-            "state": "u",
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects",
             "isDirectory": true,
+            "size": 256,
+            "modifiedTime": 1537289763767,
+            "changeTime": 1537289763767,
+            "contentHash": "c7dabad73e2168e8ed6eba01522d786339ae66da",
             "isMetadataFile": false,
-            "size": 224,
-            "modifiedTime": 1537208149450,
-            "changeTime": 1537208149450,
-            "contentHash": "9c9d1df05e33548e63929300bc69c7912d4da9d3"
+            "state": "u"
         }
     ],
     [
         "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Contact",
         {
-            "state": "u",
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Contact",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 160,
             "modifiedTime": 1537208149454,
             "changeTime": 1537208149454,
-            "contentHash": "90a4195b85a04a51588c4be1bc9417f0a5921ba3"
+            "contentHash": "90a4195b85a04a51588c4be1bc9417f0a5921ba3",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -160,7 +164,9 @@
             "changeTime": 1537207345993,
             "contentHash": "c0c903e645ffdfe9b29a9474e9d0a57e86c9b74c",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -173,7 +179,9 @@
             "changeTime": 1537207345999,
             "contentHash": "ce11be9c0af78e9a2e75fedf1cc51b5571683375",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -181,12 +189,14 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/aura/dataTable",
             "isDirectory": true,
-            "size": 448,
-            "modifiedTime": 1537207346021,
-            "changeTime": 1537207346021,
-            "contentHash": "881f54dc83dccf94a986c0b3252cf572e59dbb6d",
+            "size": 256,
+            "modifiedTime": 1537210779106,
+            "changeTime": 1537210779106,
+            "contentHash": "ecbe414dcac4dcf9d0c9e3fe24d8cad058557397",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -194,12 +204,13 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/dataTableController.cls",
             "isDirectory": false,
-            "size": 2693,
-            "modifiedTime": 1537202001877,
-            "changeTime": 1537202001877,
-            "contentHash": "2bb0e32860c2d386433b4664fd3730ad477403d6",
+            "size": 3942,
+            "modifiedTime": 1537226730998,
+            "changeTime": 1537226730998,
+            "contentHash": "decf35f54a9e779f2fda09bf5c3c7b68bd4c50e1",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -212,7 +223,9 @@
             "changeTime": 1537202001873,
             "contentHash": "0bfc8bc49e53c8f0f6b207cf675766c0d6546ee5",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -225,7 +238,9 @@
             "changeTime": 1537207345947,
             "contentHash": "50a9487e31658cb45a30660d38051c6244ce832a",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -238,7 +253,9 @@
             "changeTime": 1537207345952,
             "contentHash": "4e279a69fb21c198ac6ff06476d0615184c46efa",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -251,7 +268,9 @@
             "changeTime": 1537207345959,
             "contentHash": "3307c92a5014907cee93f06012dfbd42de874625",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -264,7 +283,9 @@
             "changeTime": 1537207345963,
             "contentHash": "ebffe3209f4739cb5f220f2442f7333fc733866f",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -277,7 +298,9 @@
             "changeTime": 1537207345964,
             "contentHash": "e1a1170a76f076b8e8cf70e392815ce33ae4a400",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -290,7 +313,9 @@
             "changeTime": 1537207345967,
             "contentHash": "bbfbf919604cb17ae8f72c3d586e41e4d3316cab",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -303,7 +328,9 @@
             "changeTime": 1537207345970,
             "contentHash": "cc7b702d973dfcf10f1a373f1b1653da797df9d1",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -316,7 +343,9 @@
             "changeTime": 1537207345972,
             "contentHash": "40679273750d211e2ee9ceec4148c8950c8865ba",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -329,7 +358,9 @@
             "changeTime": 1537207345972,
             "contentHash": "847b37ab6c39dd7023e20a34d3320d16c465977b",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -381,7 +412,9 @@
             "changeTime": 1537202001882,
             "contentHash": "689b7b7ca935958309b64dbadb05b5fbacbc755d",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -394,7 +427,9 @@
             "changeTime": 1537207345999,
             "contentHash": "fa4de70956e39a9f9bb7a0d225aa4109c35a3e43",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -407,7 +442,9 @@
             "changeTime": 1537202001886,
             "contentHash": "fa4de70956e39a9f9bb7a0d225aa4109c35a3e43",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -415,12 +452,13 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/aura/dataTable/dataTable.cmp",
             "isDirectory": false,
-            "size": 1093,
-            "modifiedTime": 1537202001917,
-            "changeTime": 1537202001918,
-            "contentHash": "889d8f3261de4e503103cb6bf664b2566326df60",
+            "size": 1352,
+            "modifiedTime": 1537216485949,
+            "changeTime": 1537216485949,
+            "contentHash": "ec8f4fe1d3e2fba19fd202e5782fbf40dee09002",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -433,7 +471,9 @@
             "changeTime": 1537207164251,
             "contentHash": "0e56fac143bebb2d3f47b76d45c3a61ff95ee18e",
             "isMetadataFile": true,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -446,7 +486,9 @@
             "changeTime": 1537202001914,
             "contentHash": "7d228b450f05e951141cbf9a70798caf86a1b752",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -454,12 +496,13 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/aura/dataTable/dataTable.design",
             "isDirectory": false,
-            "size": 408,
-            "modifiedTime": 1537202001909,
-            "changeTime": 1537202001910,
-            "contentHash": "d10619586c728170507e30797866b84b78fdf2ad",
+            "size": 514,
+            "modifiedTime": 1537294262849,
+            "changeTime": 1537293251104,
+            "contentHash": "67739f577910ae0589013dcc87d8ab32f4097762",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -467,12 +510,13 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/aura/dataTable/dataTableController.js",
             "isDirectory": false,
-            "size": 1564,
-            "modifiedTime": 1537202001906,
-            "changeTime": 1537202001906,
-            "contentHash": "7d79b41c28a19758154ea08019cfde0dbe3f86a7",
+            "size": 1975,
+            "modifiedTime": 1537217465126,
+            "changeTime": 1537217465126,
+            "contentHash": "ec3c5f791767d1c5a7b1f2402471ab8f417a68ea",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -480,25 +524,28 @@
         {
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/aura/dataTable/dataTableHelper.js",
             "isDirectory": false,
-            "size": 868,
-            "modifiedTime": 1537202001902,
-            "changeTime": 1537202001902,
-            "contentHash": "58397de98493391fc9b90b19a26bde65184960d0",
+            "size": 1951,
+            "modifiedTime": 1537226853919,
+            "changeTime": 1537226853919,
+            "contentHash": "b7110d19b03efef65e676831bf2a5b4e7f3c42e4",
             "isMetadataFile": false,
-            "state": "u"
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
         "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Opportunity/Opportunity.object-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Opportunity/Opportunity.object-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 2820,
             "modifiedTime": 1537208149451,
             "changeTime": 1537208149451,
-            "contentHash": "b1be8e740e8517b3bb78bf5aa52755122f2c23b3"
+            "contentHash": "b1be8e740e8517b3bb78bf5aa52755122f2c23b3",
+            "isMetadataFile": true,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -508,10 +555,10 @@
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Contact/fieldSets/Short_Form.fieldSet-meta.xml",
             "isDirectory": false,
             "isMetadataFile": true,
-            "size": 863,
-            "modifiedTime": 1537208149455,
-            "changeTime": 1537208149455,
-            "contentHash": "ef21a58aa7777123ee24a8e43095f14c9544fb1d"
+            "size": 861,
+            "modifiedTime": 1537301021906,
+            "changeTime": 1537301021906,
+            "contentHash": "db24bfd8a0d46dfe89a5739c2b209f1b64be333a"
         }
     ],
     [
@@ -521,23 +568,25 @@
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flexipages/Opportunity_Record_Page.flexipage-meta.xml",
             "isDirectory": false,
             "isMetadataFile": true,
-            "size": 5948,
-            "modifiedTime": 1537208149457,
-            "changeTime": 1537208149457,
-            "contentHash": "8f28e9b9c4827cfe7aaef32a7164b3ecb0315df3"
+            "size": 6291,
+            "modifiedTime": 1537301021910,
+            "changeTime": 1537301021910,
+            "contentHash": "1b7ac0cbd9b49ee9e214940635a411d1afe2c1db"
         }
     ],
     [
         "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Opportunity",
         {
-            "state": "u",
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Opportunity",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 96,
             "modifiedTime": 1537208149451,
             "changeTime": 1537208149451,
-            "contentHash": "225eb66aade4bbb0db1ef4e392d4919941ae5245"
+            "contentHash": "225eb66aade4bbb0db1ef4e392d4919941ae5245",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
         }
     ],
     [
@@ -547,23 +596,452 @@
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Contact/fieldSets",
             "isDirectory": true,
             "isMetadataFile": false,
-            "size": 96,
-            "modifiedTime": 1537208149455,
-            "changeTime": 1537208149455,
-            "contentHash": "d5b0207ad405cfba686d114b806330efb86c27a7"
+            "size": 128,
+            "modifiedTime": 1537301021907,
+            "changeTime": 1537301021907,
+            "contentHash": "b7d4a6383771855526a9bad038896554a15aceec"
         }
     ],
     [
         "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flexipages",
         {
-            "state": "u",
             "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flexipages",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 96,
-            "modifiedTime": 1537208149457,
+            "modifiedTime": 1537289763787,
             "changeTime": 1537208149457,
-            "contentHash": "bb72f203229d987f2392b93ffb8a2ae016ed806f"
+            "contentHash": "bb72f203229d987f2392b93ffb8a2ae016ed806f",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/layouts/Contact-Contact Layout.layout-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/layouts/Contact-Contact Layout.layout-meta.xml",
+            "isDirectory": false,
+            "size": 10130,
+            "modifiedTime": 1537210066238,
+            "changeTime": 1537210066238,
+            "contentHash": "5a91f65e380231dc476f1dc3d6383653edc07c32",
+            "isMetadataFile": true,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/permissionsets/DataTable.permissionset-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/permissionsets/DataTable.permissionset-meta.xml",
+            "isDirectory": false,
+            "size": 7655,
+            "modifiedTime": 1537210066243,
+            "changeTime": 1537210066243,
+            "contentHash": "dbc8e7fad80e297fe02e9ff42649b350f885b73e",
+            "isMetadataFile": true,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/permissionsets",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/permissionsets",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1537210066243,
+            "changeTime": 1537210066243,
+            "contentHash": "71d857f54045bd520e4246fb515b5e5c7854ff2a",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/Flow_Action.addToCaseContacts.md",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/Flow_Action.addToCaseContacts.md",
+            "isDirectory": false,
+            "size": 195,
+            "modifiedTime": 1537202001843,
+            "changeTime": 1537202001847,
+            "contentHash": "50a9487e31658cb45a30660d38051c6244ce832a",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/Flow_Action.addToOppContacts.md",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/Flow_Action.addToOppContacts.md",
+            "isDirectory": false,
+            "size": 202,
+            "modifiedTime": 1537202001861,
+            "changeTime": 1537202001861,
+            "contentHash": "4e279a69fb21c198ac6ff06476d0615184c46efa",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/Flow_Action.deactivateContact.md",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/Flow_Action.deactivateContact.md",
+            "isDirectory": false,
+            "size": 185,
+            "modifiedTime": 1537202001850,
+            "changeTime": 1537202001850,
+            "contentHash": "3307c92a5014907cee93f06012dfbd42de874625",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/activeContacts_Case-1.flow",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/activeContacts_Case-1.flow",
+            "isDirectory": false,
+            "size": 2848,
+            "modifiedTime": 1537202001934,
+            "changeTime": 1537202001935,
+            "contentHash": "ebffe3209f4739cb5f220f2442f7333fc733866f",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/activeContacts_Opportunity-1.flow",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/activeContacts_Opportunity-1.flow",
+            "isDirectory": false,
+            "size": 2858,
+            "modifiedTime": 1537202001930,
+            "changeTime": 1537202001930,
+            "contentHash": "e1a1170a76f076b8e8cf70e392815ce33ae4a400",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/addToCaseContacts-2.flow",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/addToCaseContacts-2.flow",
+            "isDirectory": false,
+            "size": 7100,
+            "modifiedTime": 1537202001925,
+            "changeTime": 1537202001925,
+            "contentHash": "bbfbf919604cb17ae8f72c3d586e41e4d3316cab",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/addToOppContacts-2.flow",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/addToOppContacts-2.flow",
+            "isDirectory": false,
+            "size": 7122,
+            "modifiedTime": 1537202001923,
+            "changeTime": 1537202001923,
+            "contentHash": "cc7b702d973dfcf10f1a373f1b1653da797df9d1",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/deactivateContact-2.flow",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/flows/deactivateContact-2.flow",
+            "isDirectory": false,
+            "size": 1390,
+            "modifiedTime": 1537202001938,
+            "changeTime": 1537202001938,
+            "contentHash": "40679273750d211e2ee9ceec4148c8950c8865ba",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/layouts/Flow_Action__mdt-Flow Action Layout.layout",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/layouts/Flow_Action__mdt-Flow Action Layout.layout",
+            "isDirectory": false,
+            "size": 2199,
+            "modifiedTime": 1537202001893,
+            "changeTime": 1537202001894,
+            "contentHash": "847b37ab6c39dd7023e20a34d3320d16c465977b",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowUtility.cls",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowUtility.cls",
+            "isDirectory": false,
+            "size": 14896,
+            "modifiedTime": 1537237918589,
+            "changeTime": 1537237918589,
+            "contentHash": "6bfa4d4818fa9adff23cd8a76fb94c655845d368",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowUtility.cls-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowUtility.cls-meta.xml",
+            "isDirectory": false,
+            "size": 189,
+            "modifiedTime": 1537219929858,
+            "changeTime": 1537219929858,
+            "contentHash": "e73a8cd28e1b02328c98e0c5aef784d9cc165ad0",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowPickList.cls",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowPickList.cls",
+            "isDirectory": false,
+            "size": 916,
+            "modifiedTime": 1537289975107,
+            "changeTime": 1537289975107,
+            "contentHash": "6d32ebe8cf06c7a24908bbe36281f1defb504235",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowPickList.cls-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowPickList.cls-meta.xml",
+            "isDirectory": false,
+            "size": 190,
+            "modifiedTime": 1537286842657,
+            "changeTime": 1537286842657,
+            "contentHash": "51cfc5642a4b171c4123345ce6c18892fef49a8e",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/LookupFlows__mdt/LookupFlows__mdt.object-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/LookupFlows__mdt/LookupFlows__mdt.object-meta.xml",
+            "isDirectory": false,
+            "size": 229,
+            "modifiedTime": 1537289763768,
+            "changeTime": 1537289763768,
+            "contentHash": "d2a044cb93138f8d0a229d4b4d2a85a3bf074a88",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/layouts/LookupFlows__mdt-Lookup Flow Layout.layout-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/layouts/LookupFlows__mdt-Lookup Flow Layout.layout-meta.xml",
+            "isDirectory": false,
+            "size": 2199,
+            "modifiedTime": 1537289763781,
+            "changeTime": 1537289763781,
+            "contentHash": "847b37ab6c39dd7023e20a34d3320d16c465977b",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
+            "isDirectory": false,
+            "size": 5767,
+            "modifiedTime": 1537289763788,
+            "changeTime": 1537289763788,
+            "contentHash": "0014c7f6bfc78596392da1ed4df81dc37b439138",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
+            "isDirectory": false,
+            "size": 6105,
+            "modifiedTime": 1537289763791,
+            "changeTime": 1537289763791,
+            "contentHash": "86ee2b3e045ed925a4eb676c7adda48057888292",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
+            "isDirectory": false,
+            "size": 5773,
+            "modifiedTime": 1537289763793,
+            "changeTime": 1537289763793,
+            "contentHash": "9034872b3c1cb9d4649fb1fc95f1dd0165ddff56",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles/Admin.profile-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles/Admin.profile-meta.xml",
+            "isDirectory": false,
+            "size": 19397,
+            "modifiedTime": 1537289763794,
+            "changeTime": 1537289763794,
+            "contentHash": "b0f1a94d1fd6a4c1e0f490472df4b73b83b33b95",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/LookupFlows.activeContacts_Case.md-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/LookupFlows.activeContacts_Case.md-meta.xml",
+            "isDirectory": false,
+            "size": 197,
+            "modifiedTime": 1537289763794,
+            "changeTime": 1537289763794,
+            "contentHash": "fc8b96dbdba2032be9bee242e67aa2916733c157",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/LookupFlows.activeContacts_Opportunity.md-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/customMetadata/LookupFlows.activeContacts_Opportunity.md-meta.xml",
+            "isDirectory": false,
+            "size": 204,
+            "modifiedTime": 1537289763795,
+            "changeTime": 1537289763795,
+            "contentHash": "102fb4f67bd5b22a73eb5fdc23ac14f93303e842",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/LookupFlows__mdt",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/LookupFlows__mdt",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1537289763768,
+            "changeTime": 1537289763768,
+            "contentHash": "f72c427dbe113b90a9a101876dca3dde3f13fa27",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/profiles",
+            "isDirectory": true,
+            "size": 192,
+            "modifiedTime": 1537289763793,
+            "changeTime": 1537289763793,
+            "contentHash": "9c367b0e719eb8c48c5b0d9cbfb5f580a4bd6717",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FieldSetPickList.cls",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FieldSetPickList.cls",
+            "isDirectory": false,
+            "size": 1038,
+            "modifiedTime": 1537293810222,
+            "changeTime": 1537293810222,
+            "contentHash": "556872d1b71caa2dad80bf11d3d1a3ddd6381e4b",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FieldSetPickList.cls-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FieldSetPickList.cls-meta.xml",
+            "isDirectory": false,
+            "size": 194,
+            "modifiedTime": 1537292830693,
+            "changeTime": 1537292830693,
+            "contentHash": "060779b931d16f3199460b020b0f6180fb5ee2ee",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowActionPickList.cls",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowActionPickList.cls",
+            "isDirectory": false,
+            "size": 923,
+            "modifiedTime": 1537300935867,
+            "changeTime": 1537300935867,
+            "contentHash": "38e403c7d88c79f1c9cd64ef50289b4dda723fec",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowActionPickList.cls-meta.xml",
+        {
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/classes/FlowActionPickList.cls-meta.xml",
+            "isDirectory": false,
+            "size": 196,
+            "modifiedTime": 1537294117051,
+            "changeTime": 1537294117051,
+            "contentHash": "b5cd002df9f25be5ce2242332c76c96646dba02d",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Contact/fieldSets/Long_Form.fieldSet-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/dcarroll/Documents/Projects/Dreamforce18/dataTable/force-app/main/default/objects/Contact/fieldSets/Long_Form.fieldSet-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 857,
+            "modifiedTime": 1537301021907,
+            "changeTime": 1537301021907,
+            "contentHash": "051dbc00c237b9df6344085c751fd28ba264ec86"
         }
     ]
 ]

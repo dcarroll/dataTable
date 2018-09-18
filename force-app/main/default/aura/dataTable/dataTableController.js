@@ -17,7 +17,13 @@
     	}));
     	$A.enqueueAction(action);
         helper.getData(component);
-	},
+    },
+    
+
+    secondaryInit: function(component, event, helper) {
+        helper.getSecondaryData(component, event, helper);
+    },
+    
     doAction : function(component,event,helper) {
 		var action = component.get('c.actionForLightning');
         action.setParams({
@@ -37,5 +43,14 @@
             }
     	}));
     	$A.enqueueAction(action);
-	}
+    },
+
+    dumpColumns: function(component, event, helper) {
+        console.log(JSON.stringify(component.get('v.myColumns'), null, 4));
+    },
+
+    dumpData: function(component, event, helper) {
+        console.log(JSON.stringify(component.get('v.records'), null, 4));
+    }
+
 })

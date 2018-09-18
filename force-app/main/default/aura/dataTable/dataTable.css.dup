@@ -1,8 +1,0 @@
-.THIS .padding {
-    padding-left:2em;
-    padding-right:2em;
-}
-
-.THIS .slds-scrollable_y {
-    min-height: 100px;
-}
