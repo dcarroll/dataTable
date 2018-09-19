@@ -22,5 +22,4 @@ global class FieldSetPickList extends VisualEditor.DynamicPickList {
         }
         return myValues;
     }
-
 }

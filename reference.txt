@@ -1,0 +1,32 @@
+Entry point: disassembleSObjects
+Get the name fields
+    loop through the describes looking for either NAMEFIELD or REFERENCE type
+Get a reference set of columns that are part of the collection of sobjects
+
+Loop over the collection of columns
+    if the namefields contains the field name of the current column, we have a name field columns to supplement
+        grab the name field based on the previous existence with in the columns
+            A name field contains a name, and object type and a namefield type (REFERENCE OR NAMEFIELD)
+            Create a new attributesType for the column
+            Grab a reference to that attribute type to manipulate
+            Add a new label attribute to it setting that to a new Map
+            Grab a reference to the new label attribute to manipulate
+            Create an attribute called 'fieldName' and add the column name to it
+            Add a new attribute called 'fieldName' to the column setting also to the column name
+            Add a new attribute called 'type' to the column setting it to url
+            
+            We now have our column setup properly
+            Add the link and label information for the url by calling addLinkFieldToJSONSobjects and
+                passing in the collection of Json objects (records) passed to the entry point
+                and construct a virtual file prefixed with 'Link_' and the name of the field reference and the
+                type of object it is referencing. This adds new fields to the records
+
+                'Link_' + col.fieldName, namefield.objectType
+
+add the newly generated columns to the list of columns generated above
+Now, we can loop over the final set of data and run queries to supplement the reference ids with name field
+values, that connects up the column definitions with data
+
+
+
+
