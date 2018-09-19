@@ -65,7 +65,7 @@ Check out the Apex code that runs any Flow that you put into the Lightning Compo
         return JSON.serialize(cleanedUp);
     }
 ```
-Check out the [Apex Code](/force-app/main/default/classes/FlowUtility.cls) that takes a `List<SObject>` and generates both a datatable compatible set of data and the columns for that table in `FlowUtility.cls` and figures out the linking for namefields and reference fields.
+Check out the [Apex Code](/force-app/main/default/classes/FlowUtility.cls#L3) that takes a `List<SObject>` and generates both a datatable compatible set of data and the columns for that table in `FlowUtility.cls` and figures out the linking for namefields and reference fields.
 
 
 
