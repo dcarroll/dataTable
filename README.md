@@ -13,6 +13,19 @@ There is a Lightning Component in the code called dataTable that you can to your
 
 ![Image of Opportunity](/images/screenshot-73.png)
 
+## How it works
+### Rendering The Data Table
+The Lightning component uses a dataTable component to render the data.  The dataTable requires a dataset and also column definitions.  The Apex controller uses a utility class that takes in a set of records and emits an object that contains supplemented records and column definitions.
+
+The utility scans the records set and uses the describe information for the SObject type to determine the column defintion, including if it is a namefield that should link to the record home and if it is a reference field that should link to a parent record.  If it is parent, then the parent object is queried to get it's name field and a virtual field is create on the dataset to contain the name such that the Id for the parent is hidden, but the link still works.
+
+### Using Fieldsets
+For this sample, field sets drive what is displayed in the datatable and Flows determine the records that are displyed.  This means the all that need be returned from the flow is a collection of SObjects with just the Id present on the SObjects.  
+
+Once the Flow returns the list of SObjects, a query is generated for the SObject use the field set to determine the values for the SELECT clause.  The criteria for the filter use the IN operated and the list of ids to determine the records to return.
+
+This makes the Flow simpler and not tied to a particular UI experience, the Lightning component handles that.
+
 ## Some things to try
 Modify the `activeContacts_Opportunity` flow to use different criteria in the Lookup.
 
@@ -67,6 +80,9 @@ Check out the Apex code that runs any Flow that you put into the Lightning Compo
 ```
 Check out the [Apex Code](/force-app/main/default/classes/FlowUtility.cls#L3) that takes a `List<SObject>` and generates both a datatable compatible set of data and the columns for that table in `FlowUtility.cls` and figures out the linking for namefields and reference fields.
 
+## Contributors and Thanks
+[Rich Englhard](https://github.com/Englhard) - Lightning Comoponent and Flows and Custom Metadata
 
+[Andrew Fawcett](https://github.com/afawcett) - Concepts and Architecture
 
 
