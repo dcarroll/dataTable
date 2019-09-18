@@ -2,11 +2,12 @@
     <aura:attribute name="flowNameLookup" type="String" />
     <aura:attribute name="fsName" type="String" />
     <aura:attribute name="fActions" type="String" />
-    <aura:attribute name="oName" type="String" />
+    <aura:attribute name="oName" type="String" default="Contact" />
     <aura:attribute name="records" type="Object" />
     <aura:attribute name="myColumns" type="List" />
     <aura:attribute name="recordId" type="String" />
     <aura:attribute name="titleString" type="String" />
+    <aura:attribute name="showAll" type="boolean" />
     <aura:handler name="init" value="{!this}" action="{!c.init}" />
 
     <lightning:card title="{!v.titleString}" class="slds-card_boundary">

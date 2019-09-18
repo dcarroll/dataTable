@@ -32,12 +32,14 @@ public with sharing class FlowUtility {
 
                     jsonCol.put('fieldName', 'Link_' + col.fieldName);
                     jsonCol.put('type', 'url');
-
                     this.addLinkFieldToJSONSobjects(jsonRecords, 'Link_' + col.fieldName, namefield);
+                    System.debug('jsonRecords:\n' + jsonRecords);
                 }
                 JSONCols.add(jsonCol);
             }
             this.lookupReferenceNames(jsonRecords, nameFields, JSONCols);
+            System.debug(jsonRecords);
+            System.debug(JSONCols);
             return new DynamicResults(jsonRecords, JSONCols);
         }
         return null;
@@ -202,7 +204,9 @@ public with sharing class FlowUtility {
         // Loop through the records getting a map of SObject names and Id to query for
         Map<String, Object> objIdMap = new Map<String, Object>();
         for (Object jsonObject : jsonObjects) {
+            // Turn list into map keyed on IDS
             Map<String, Object> jsonMapObject = (Map<String, Object>)jsonObject;
+            // Loop over nameFields so that we can pick out the reference fields
             for (String nameFieldName : nameFields.keySet()) { 
                 // Grab the object field value for the nameField if the nameField type is REFERENCE
                 NameField nf = nameFields.get(nameFieldName);
@@ -213,6 +217,7 @@ public with sharing class FlowUtility {
                         Map<String, Object> objIdItem = new Map<String, Object>();
                         objIdItem.put('ids', ids);
                         objIdItem.put('nameField', nf.name);
+                        System.debug('Adding objIdMapItem' + nf.objectType + '\n' + objIdItem);
                         objIdMap.put(nf.objectType, objIdItem);
                     } else {
                         Map<String, Object> objIdItem = (Map<String, Object>)objIdMap.get(nf.objectType);
@@ -227,18 +232,23 @@ public with sharing class FlowUtility {
             Map<String, Object> objIdItem = (Map<String, Object>)objIdMap.get(objName);
             List<String> ids = (List<String>)(objIdItem).get('ids');
             String cleanObjName = objName.removeEnd(')').removeStart('(');
-            String soql = 'Select Name From ' + cleanObjName + ' Where Id in (\'' + String.join(ids, '\',\'') + '\')';
+            String soql = 'Select Name, Id From ' + cleanObjName + ' Where Id in (\'' + String.join(ids, '\',\'') + '\')';
 
             for(SObject obj : Database.query(soql)) {
                 // Now, just need to find the right record and add a new column for reference name!
                 for(Object jobj : jsonObjects) {
                     Map<String, Object> jobjMap = (Map<String, Object>)jobj;
+                    Map<String, Object> tempMap = new Map<String, Object>();
                     if (jobjMap.get('Id') == obj.Id) {
                         String nfld = (String)objIdItem.get('nameField');
+                        tempMap.put('Link_' + nfld, obj.get((String)objIdItem.get('nameField')));
+                        System.debug('TempMap:\n' + tempMap);
                         jobjMap.put('Link_' + nfld, obj.get((String)objIdItem.get('nameField')));
                     } else {
                         System.debug('This must be a reference field. \n' + obj.Id);
                         System.debug('What os the nfld? \n' + (String)objIdItem.get('nameField'));
+                        tempMap.put('Link_' + (String)objIdItem.get('nameField') + '_Name', obj.get('Name'));
+                        System.debug('TempMap:\n' + tempMap);
                         jobjMap.put('Link_' + (String)objIdItem.get('nameField') + '_Name', obj.get('Name'));
                     }
                 }

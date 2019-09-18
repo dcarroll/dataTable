@@ -106,7 +106,7 @@
         <queriedFields>Id</queriedFields>
     </recordLookups>
     <startElementReference>GetActiveOppty</startElementReference>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>ActiveOpportunity</name>
         <dataType>SObject</dataType>

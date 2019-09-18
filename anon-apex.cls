@@ -1,0 +1,1 @@
+dataTableController.listForLightningWithColumns('Active_Contacts_Decision_Makers_Oppty', '0069A000004K3XtQAK', 'Long_Form', '');
