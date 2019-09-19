@@ -5,8 +5,8 @@ public class dataTableController {
         
         Flow.Interview flow = Flow.Interview.createInterview(flowName, new MAP<String, Object> {'recordId' => recordId});
         flow.start();
-        LIST<SObject> lightningList = (LIST<SObject>) flow.getVariableValue('records');
-        return lightningList;
+        LIST<SObject> records = (LIST<SObject>) flow.getVariableValue('records');
+        return records;
     }
 
     @auraEnabled
@@ -14,8 +14,8 @@ public class dataTableController {
         FlowUtility flowUtil = new FlowUtility();
         Flow.Interview flow = Flow.Interview.createInterview(flowName, new MAP<String, Object> {'recordId' => recordId});
         flow.start();
-        LIST<SObject> lightningList = (LIST<SObject>) flow.getVariableValue('records');
-        FlowUtility.DynamicResults cleanedUp = flowUtil.disassembleSObjects(applyFieldSet(lightningList, fieldsetName), fActions);
+        LIST<SObject> records = (LIST<SObject>) flow.getVariableValue('records');
+        FlowUtility.DynamicResults cleanedUp = flowUtil.disassembleSObjects(applyFieldSet(records, fieldsetName), fActions);
         return JSON.serialize(cleanedUp);
     }
 
