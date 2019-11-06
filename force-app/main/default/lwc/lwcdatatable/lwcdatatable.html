@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="" class="slds-card_boundary">
+        <lightning:card title={titleString} class="slds-card_boundary">
+            <lightning-datatable 
+                data=""
+                columns={columns}
+                key-field="Id"
+                hide-checkbox-column="true"
+                onrowaction={doAction}>
+            </lightning-datatable>
+            
+        </lightning:card>
+    </lightning-card>
+</template>

@@ -7,13 +7,20 @@
     <aura:attribute name="myColumns" type="List" />
     <aura:attribute name="recordId" type="String" />
     <aura:attribute name="titleString" type="String" />
+    <aura:attribute name="buttonLabel" type="String" />
     <aura:attribute name="showAll" type="boolean" />
+    <aura:attribute name="firstName" type="String" default="world"/>
+    <aura:attribute name="removedFields" type="Object" />
+    <aura:attribute name="removedColumns" type="List" />
+    <aura:attribute name="permsetAssigned" type="Boolean" />
+
     <aura:handler name="init" value="{!this}" action="{!c.init}" />
 
     <lightning:card title="{!v.titleString}" class="slds-card_boundary">
 
         <lightning:button onclick="{!c.dumpColumns}" label="View Columns" />
         <lightning:button onclick="{!c.dumpData}" label="View Data" />
+        <lightning:button onclick="{!c.echo}" aura:id="togglebutton" label="{!v.buttonLabel}" />
 
         <lightning:datatable aura:id="entries"
                              data="{!v.records}"
@@ -22,6 +29,14 @@
                              hideCheckboxColumn="true"
                              onrowaction="{!c.doAction}"
                              />
-        
     </lightning:card>
+    <lightning:card title="Removed Fields" class="slds-card_boundary">
+        <lightning:datatable 
+            data="{!v.removedFields}"
+            columns="{!v.removedColumns}"
+            hideCheckboxColumn="true"
+            keyField="index"
+            />
+    </lightning:card>
+    <div>{!v.removedFields}</div>
 </aura:component>

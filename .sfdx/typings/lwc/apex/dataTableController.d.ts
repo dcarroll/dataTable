@@ -1,3 +1,6 @@
+declare module "@salesforce/apex/dataTableController.serverEcho" {
+  export default function serverEcho(param: {firstName: any}): Promise<any>;
+}
 declare module "@salesforce/apex/dataTableController.listForLightning" {
   export default function listForLightning(param: {flowName: any, recordId: any}): Promise<any>;
 }

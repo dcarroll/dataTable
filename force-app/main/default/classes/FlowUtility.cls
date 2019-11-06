@@ -1,6 +1,13 @@
 public with sharing class FlowUtility {
     
-    public DynamicResults disassembleSObjects(List<SObject> objects, String fActions) {
+    public DynamicResults disassembleSObjects(List<SObject> sobjects, String fActions) {
+        SObjectAccessDecision decision = Security.stripInaccessible(
+            AccessType.READABLE,
+            sobjects);
+        List<Sobject> objects = decision.getRecords();
+        
+        Map<String, Set<String>> removedFields = decision.getRemovedFields();
+        System.debug('Removed Fields: ' + removedFields);
         Schema.SObjectType objType = objects.getSObjectType();
         Map<String, Schema.SObjectField> fields = objType.getDescribe().fields.getMap();
         List<Object> jsonRecords = toJSONList(objects);
@@ -40,7 +47,7 @@ public with sharing class FlowUtility {
             this.lookupReferenceNames(jsonRecords, nameFields, JSONCols);
             System.debug(jsonRecords);
             System.debug(JSONCols);
-            return new DynamicResults(jsonRecords, JSONCols);
+            return new DynamicResults(jsonRecords, JSONCols, removedFields);
         }
         return null;
     }
@@ -105,6 +112,7 @@ public with sharing class FlowUtility {
     }
     
     public List<String> getFieldListFromFieldSetFromSObjectList(List<SObject> sobjects, string fieldSetName) {
+        System.debug('getFieldListFromFieldSetFromSObjectList' + sobjects);
         Schema.SObjectType objType = sobjects.getSObjectType();
         return getFieldListFromFieldSet(objType.getDescribe().localname, fieldSetName);
     }
@@ -297,11 +305,13 @@ public with sharing class FlowUtility {
     public class DynamicResults {
         List<Object> records = new List<Object>();
         List<Map<String, Object>> columns = new List<Map<String, Object>>();
+        Map<String, Set<String>> removedFields = new Map<String, Set<String>>();
         CustomError error;
 
-        private DynamicResults(List<Object> recs, List<Map<String, Object>> cols) {
+        private DynamicResults(List<Object> recs, List<Map<String, Object>> cols, Map<String, Set<String>> removedFlds) {
             records = recs;
             columns = cols;
+            removedFields = removedFlds;
         }
     }
     
