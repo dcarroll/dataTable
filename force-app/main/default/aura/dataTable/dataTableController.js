@@ -18,11 +18,6 @@
         helper.doAction(componet, event);
     },
 
-    switchPerms: function(component, event, helper) {
-        console.log('Toggle permeset invoked');
-        helper.switchPerms(component);
-    },
-
     dumpColumns: function(component) {
         console.log(JSON.stringify(component.get('v.myColumns'), null, 4));
     },

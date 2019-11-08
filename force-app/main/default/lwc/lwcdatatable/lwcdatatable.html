@@ -1,14 +1,21 @@
 <template>
-    <lightning-card title="" class="slds-card_boundary">
-        <lightning:card title={titleString} class="slds-card_boundary">
+        <lightning-card title={titleString} class="slds-card_boundary">
+            <lightning-button label={buttonLabel} onclick={togglePerms}></lightning-button>
+            <lightning-button label="Reload Table" onclick={reloadTable}></lightning-button>
             <lightning-datatable 
-                data=""
+                data={records}
                 columns={columns}
                 key-field="Id"
                 hide-checkbox-column="true"
                 onrowaction={doAction}>
             </lightning-datatable>
-            
-        </lightning:card>
-    </lightning-card>
+            <lightning-card title="Removed Fields" class="slds-card_boundary">
+                <lightning-datatable 
+                    data={removedFields}
+                    columns={removedColumns}
+                    hide-checkbox-column="true"
+                    key-field="index">
+                </lightning-datatable>
+            </lightning-card>
+        </lightning-card>
 </template>

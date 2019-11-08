@@ -8,6 +8,7 @@ public with sharing class FlowUtility {
         
         Map<String, Set<String>> removedFields = decision.getRemovedFields();
         System.debug('Removed Fields: ' + removedFields);
+
         Schema.SObjectType objType = objects.getSObjectType();
         Map<String, Schema.SObjectField> fields = objType.getDescribe().fields.getMap();
         List<Object> jsonRecords = toJSONList(objects);

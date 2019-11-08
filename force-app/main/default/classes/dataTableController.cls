@@ -1,7 +1,7 @@
 public class dataTableController {
 
-    @AuraEnabled
-    public static String serverEcho(String firstName) {
+    @AuraEnabled(cacheable=false)
+    public static String togglePerms() {
         switchPerms();
         return assignedPermset();
     }
@@ -88,9 +88,9 @@ public class dataTableController {
         String assigneeId = UserInfo.getUserId();
         PermissionSetAssignment permsetAssignment = getPermsetAssignment(assigneeId, permset.Id);
         if (permsetAssignment == null) {
-            return 'Permset not assigned';
+            return 'assigned';
         } else {
-            return 'Permset assigned';
+            return 'removed';
         }
     }
 
