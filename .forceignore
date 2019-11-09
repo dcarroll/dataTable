@@ -3,3 +3,4 @@
 **/jsconfig.json
 
 **/.eslintrc.json
+force-app/**/README.md

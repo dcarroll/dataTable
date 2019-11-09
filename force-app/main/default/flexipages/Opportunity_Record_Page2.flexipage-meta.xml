@@ -71,18 +71,10 @@
                 <value>Long_Form</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
-                <name>oName</name>
-                <value>Contact</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>showAll</name>
-                <value>false</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
                 <name>titleString</name>
                 <value>Active Contact List</value>
             </componentInstanceProperties>
-            <componentName>dataTable</componentName>
+            <componentName>lwcdatatable</componentName>
         </componentInstances>
         <name>Facet-659f6315-3fc1-47bd-9b4f-7e742be20e95</name>
         <type>Facet</type>

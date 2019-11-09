@@ -142,6 +142,7 @@
         <queriedFields>Id</queriedFields>
     </recordLookups>
     <startElementReference>flContact</startElementReference>
+    <status>Active</status>
     <variables>
         <name>contactExists</name>
         <dataType>Boolean</dataType>

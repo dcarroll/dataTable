@@ -54,6 +54,7 @@
         <queriedFields>Id</queriedFields>
     </recordLookups>
     <startElementReference>flCase</startElementReference>
+    <status>Active</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>

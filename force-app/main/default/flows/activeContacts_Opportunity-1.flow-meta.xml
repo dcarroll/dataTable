@@ -53,6 +53,7 @@
         <queriedFields>AccountId</queriedFields>
     </recordLookups>
     <startElementReference>flOpp</startElementReference>
+    <status>Active</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>
