@@ -36,6 +36,12 @@
             <stringValue>LightningFlowBuilder</stringValue>
         </value>
     </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
         <name>Get_Active_Oppty_Contact_Roles</name>
@@ -105,8 +111,14 @@
         <outputReference>ContactFromContactRole</outputReference>
         <queriedFields>Id</queriedFields>
     </recordLookups>
-    <startElementReference>GetActiveOppty</startElementReference>
-    <status>Active</status>
+    <start>
+        <locationX>103</locationX>
+        <locationY>101</locationY>
+        <connector>
+            <targetReference>GetActiveOppty</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
     <variables>
         <name>ActiveOpportunity</name>
         <dataType>SObject</dataType>

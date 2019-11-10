@@ -6,10 +6,34 @@
                 <name>collapsed</name>
                 <value>false</value>
             </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideChatterActions</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>numVisibleActions</name>
+                <value>3</value>
+            </componentInstanceProperties>
             <componentName>force:highlightsPanel</componentName>
         </componentInstances>
         <mode>Replace</mode>
         <name>header</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>hideUpdateButton</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>variant</name>
+                <value>linear</value>
+            </componentInstanceProperties>
+            <componentName>runtime_sales_pathassistant:pathAssistant</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>subheader</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -22,14 +46,6 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>forceChatter:recordFeedContainer</componentName>
-        </componentInstances>
-        <mode>Replace</mode>
-        <name>feedTabContent</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <componentInstances>
             <componentName>force:detailPanel</componentName>
         </componentInstances>
         <mode>Replace</mode>
@@ -38,10 +54,14 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentInstanceProperties>
-                <name>fActions</name>
-                <value>addToOppContacts,deactivateContact</value>
-            </componentInstanceProperties>
+            <componentName>forceChatter:recordFeedContainer</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>feedTabContent</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
             <componentInstanceProperties>
                 <name>flowNameLookup</name>
                 <value>activeContacts_Opportunity</value>
@@ -51,19 +71,12 @@
                 <value>Long_Form</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
-                <name>oName</name>
-                <value>Contact</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
                 <name>titleString</name>
-                <value>Active Contacts</value>
+                <value>Active Contact List</value>
             </componentInstanceProperties>
-            <componentName>dataTable</componentName>
+            <componentName>lwcdatatable</componentName>
         </componentInstances>
-        <componentInstances>
-            <componentName>force:relatedListContainer</componentName>
-        </componentInstances>
-        <name>Facet-1dae18fd-be5b-478d-b0ac-2025733ac75c</name>
+        <name>Facet-659f6315-3fc1-47bd-9b4f-7e742be20e95</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -85,17 +98,6 @@
         <componentInstances>
             <componentInstanceProperties>
                 <name>body</name>
-                <value>feedTabContent</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>title</name>
-                <value>Standard.Tab.collaborate</value>
-            </componentInstanceProperties>
-            <componentName>flexipage:tab</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>body</name>
                 <value>detailTabContent</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
@@ -106,16 +108,27 @@
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
+                <name>body</name>
+                <value>feedTabContent</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Standard.Tab.collaborate</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
                 <name>active</name>
                 <value>true</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>body</name>
-                <value>Facet-1dae18fd-be5b-478d-b0ac-2025733ac75c</value>
+                <value>Facet-659f6315-3fc1-47bd-9b4f-7e742be20e95</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>title</name>
-                <value>Contact Roles</value>
+                <value>Data Table</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
         </componentInstances>
@@ -137,19 +150,54 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentName>cooper:companyInsightTeaserCard</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentInstanceProperties>
-                <name>hideUpdateButton</name>
-                <value>false</value>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
             </componentInstanceProperties>
-            <componentName>runtime_sales_pathassistant:pathAssistant</componentName>
+            <componentInstanceProperties>
+                <name>rowsToDisplay</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListContainer</componentName>
         </componentInstances>
         <mode>Replace</mode>
-        <name>subheader</name>
-        <type>Region</type>
+        <name>relatedListTabContent</name>
+        <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>cooper:companyInsightTeaserCard</componentName>
+            <componentInstanceProperties>
+                <name>active</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>relatedListTabContent</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Standard.Tab.relatedLists</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>sidebartabs</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>tabs</name>
+                <value>sidebartabs</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tabset</componentName>
         </componentInstances>
         <mode>Replace</mode>
         <name>sidebar</name>

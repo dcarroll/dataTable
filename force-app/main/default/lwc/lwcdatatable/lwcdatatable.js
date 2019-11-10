@@ -14,7 +14,7 @@ export default class Lwcdatatable extends LightningElement {
     @api removedFields = [];
     @track removedColumns;
     @api flowNameLookup;
-    @api fsName;
+    @api fsName = 'Long Form';
     @api titleString;
     @api fActions = 'none';
     @track error;
