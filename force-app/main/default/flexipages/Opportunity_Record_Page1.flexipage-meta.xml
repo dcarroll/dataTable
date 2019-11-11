@@ -76,7 +76,7 @@
             </componentInstanceProperties>
             <componentName>lwcdatatable</componentName>
         </componentInstances>
-        <name>Facet-659f6315-3fc1-47bd-9b4f-7e742be20e95</name>
+        <name>Facet-3e1c91d4-3266-43d4-b19e-a71b0bf95255</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -124,7 +124,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>body</name>
-                <value>Facet-659f6315-3fc1-47bd-9b4f-7e742be20e95</value>
+                <value>Facet-3e1c91d4-3266-43d4-b19e-a71b0bf95255</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>title</name>

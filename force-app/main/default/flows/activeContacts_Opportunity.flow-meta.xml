@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <interviewLabel>activeContacts-Case {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>activeContacts-Case</label>
+    <interviewLabel>Active Contacts - Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Active Contacts - Opportunity</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
         <name>flActiveContacts</name>
@@ -13,7 +25,7 @@
             <field>AccountId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>sovCase.AccountId</elementReference>
+                <elementReference>sovOpportunity.AccountId</elementReference>
             </value>
         </filters>
         <filters>
@@ -33,8 +45,8 @@
         <queriedFields>ContactLink__c</queriedFields>
     </recordLookups>
     <recordLookups>
-        <name>flCase</name>
-        <label>flCase</label>
+        <name>flOpp</name>
+        <label>flOpp</label>
         <locationX>121</locationX>
         <locationY>163</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
@@ -48,12 +60,18 @@
                 <elementReference>recordId</elementReference>
             </value>
         </filters>
-        <object>Case</object>
-        <outputReference>sovCase</outputReference>
+        <object>Opportunity</object>
+        <outputReference>sovOpportunity</outputReference>
         <queriedFields>AccountId</queriedFields>
-        <queriedFields>Id</queriedFields>
     </recordLookups>
-    <startElementReference>flCase</startElementReference>
+    <start>
+        <locationX>103</locationX>
+        <locationY>101</locationY>
+        <connector>
+            <targetReference>flOpp</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>
@@ -70,11 +88,11 @@
         <objectType>Contact</objectType>
     </variables>
     <variables>
-        <name>sovCase</name>
+        <name>sovOpportunity</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
-        <objectType>Case</objectType>
+        <objectType>Opportunity</objectType>
     </variables>
 </Flow>

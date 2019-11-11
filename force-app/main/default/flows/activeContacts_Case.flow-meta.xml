@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <interviewLabel>Active Contacts - Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Active Contacts - Opportunity</label>
+    <interviewLabel>activeContacts-Case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>activeContacts-Case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
         <name>flActiveContacts</name>
         <label>flActiveContacts</label>
-        <locationX>121</locationX>
-        <locationY>283</locationY>
+        <locationX>199</locationX>
+        <locationY>272</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <filters>
             <field>AccountId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>sovOpportunity.AccountId</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Inactive__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <booleanValue>false</booleanValue>
+                <elementReference>sovCase.AccountId</elementReference>
             </value>
         </filters>
         <object>Contact</object>
         <outputReference>records</outputReference>
+        <queriedFields>Id</queriedFields>
         <queriedFields>FirstName</queriedFields>
         <queriedFields>LastName</queriedFields>
-        <queriedFields>Id</queriedFields>
         <queriedFields>Email</queriedFields>
         <queriedFields>Phone</queriedFields>
-        <queriedFields>ContactLink__c</queriedFields>
     </recordLookups>
     <recordLookups>
-        <name>flOpp</name>
-        <label>flOpp</label>
-        <locationX>121</locationX>
-        <locationY>163</locationY>
+        <name>flCase</name>
+        <label>flCase</label>
+        <locationX>256</locationX>
+        <locationY>107</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>flActiveContacts</targetReference>
@@ -48,11 +52,19 @@
                 <elementReference>recordId</elementReference>
             </value>
         </filters>
-        <object>Opportunity</object>
-        <outputReference>sovOpportunity</outputReference>
+        <object>Case</object>
+        <outputReference>sovCase</outputReference>
+        <queriedFields>Id</queriedFields>
         <queriedFields>AccountId</queriedFields>
     </recordLookups>
-    <startElementReference>flOpp</startElementReference>
+    <start>
+        <locationX>103</locationX>
+        <locationY>101</locationY>
+        <connector>
+            <targetReference>flCase</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>
@@ -69,11 +81,11 @@
         <objectType>Contact</objectType>
     </variables>
     <variables>
-        <name>sovOpportunity</name>
+        <name>sovCase</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
-        <objectType>Opportunity</objectType>
+        <objectType>Case</objectType>
     </variables>
 </Flow>

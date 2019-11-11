@@ -1,3 +1,5 @@
 /mdapi
 .sfdx
 .vscode
+anon-apex.cls
+**/.DS_Store

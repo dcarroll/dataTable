@@ -1,11 +1,22 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "DataTable",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "47.0",
+    "packageAliases": {
+        "DataTable": "0HoB0000000KzIlKAK",
+        "DataTable@0.1.0-1": "04tB0000000YrEYIA0",
+        "DataTable@0.1.0-2": "04tB0000000YrEdIAK",
+        "DataTable@0.1.0-4": "04tB0000000YrEnIAK",
+        "DataTable@0.1.0-5": "04tB0000000YrEsIAK",
+        "DataTable@0.1.0-6": "04tB0000000YrExIAK"
     }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "46.0"
 }

@@ -18,6 +18,16 @@
         <isRequired>false</isRequired>
     </displayedFields>
     <displayedFields>
+        <field>Title</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Department</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
         <field>AccountId</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>

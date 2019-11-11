@@ -6,14 +6,11 @@ global class FlowActionPickList extends VisualEditor.DynamicPickList {
         return defaultValue;
     }
 
-    private List<LookupFlows__mdt> getLookupFlows() {
-        return [Select DeveloperName, MasterLabel From LookupFlows__mdt];
-    }
     global override VisualEditor.DynamicPickListRows getValues() {
         VisualEditor.DynamicPickListRows  myValues = new VisualEditor.DynamicPickListRows();
         myValues = new VisualEditor.DynamicPickListRows();
-        for (LookupFlows__mdt lookupFlow : this.getLookupFlows()) {
-            myValues.addRow(new VisualEditor.DataRow(lookupFlow.MasterLabel, lookupFlow.DeveloperName));
+        for (Flow_Action__mdt actionFlow : [Select DeveloperName, MasterLabel From Flow_Action__mdt]) {
+            myValues.addRow(new VisualEditor.DataRow(actionFlow.MasterLabel, actionFlow.DeveloperName));
         }
         return myValues;
     }

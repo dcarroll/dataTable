@@ -3,8 +3,8 @@
     <assignments>
         <name>Contacts_Exists_to_True</name>
         <label>Contacts Exists to True</label>
-        <locationX>334</locationX>
-        <locationY>208</locationY>
+        <locationX>336</locationX>
+        <locationY>209</locationY>
         <assignmentItems>
             <assignToReference>contactExists</assignToReference>
             <operator>Assign</operator>
@@ -13,14 +13,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>lCaseContacts</targetReference>
+            <targetReference>lOppContacts</targetReference>
         </connector>
     </assignments>
     <decisions>
         <name>Does_Contact_Exist</name>
         <label>Does Contact Exist?</label>
-        <locationX>138</locationX>
-        <locationY>434</locationY>
+        <locationX>142</locationX>
+        <locationY>435</locationY>
         <defaultConnector>
             <targetReference>rcCaseContact</targetReference>
         </defaultConnector>
@@ -44,14 +44,14 @@
         <locationX>400</locationX>
         <locationY>324</locationY>
         <defaultConnector>
-            <targetReference>lCaseContacts</targetReference>
+            <targetReference>lOppContacts</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>sovCaseContact.ContactId</leftValueReference>
+                <leftValueReference>sovOppContact.ContactId</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>sovContact.Id</elementReference>
@@ -63,15 +63,15 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <interviewLabel>addToCaseContacts {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>addToCaseContacts</label>
+    <interviewLabel>addToOppContacts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>addToOppContacts</label>
     <loops>
-        <name>lCaseContacts</name>
-        <label>lCaseContacts</label>
-        <locationX>143</locationX>
-        <locationY>322</locationY>
-        <assignNextValueToReference>sovCaseContact</assignNextValueToReference>
-        <collectionReference>socvCaseContacts</collectionReference>
+        <name>lOppContacts</name>
+        <label>lOppContacts</label>
+        <locationX>147</locationX>
+        <locationY>325</locationY>
+        <assignNextValueToReference>sovOppContact</assignNextValueToReference>
+        <collectionReference>socvOppContacts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Same_Contact</targetReference>
@@ -80,47 +80,39 @@
             <targetReference>Does_Contact_Exist</targetReference>
         </noMoreValuesConnector>
     </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
         <name>rcCaseContact</name>
         <label>rcCaseContact</label>
-        <locationX>330</locationX>
+        <locationX>332</locationX>
         <locationY>434</locationY>
-        <assignRecordIdToReference>createdCaseContactId</assignRecordIdToReference>
-        <inputAssignments>
-            <field>CasesId</field>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </inputAssignments>
+        <assignRecordIdToReference>createdOppContactId</assignRecordIdToReference>
         <inputAssignments>
             <field>ContactId</field>
             <value>
                 <elementReference>sovContact.Id</elementReference>
             </value>
         </inputAssignments>
-        <object>CaseContactRole</object>
-    </recordCreates>
-    <recordLookups>
-        <name>flCaseContacts</name>
-        <label>flCaseContacts</label>
-        <locationX>148</locationX>
-        <locationY>208</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>lCaseContacts</targetReference>
-        </connector>
-        <filters>
-            <field>CasesId</field>
-            <operator>EqualTo</operator>
+        <inputAssignments>
+            <field>OpportunityId</field>
             <value>
                 <elementReference>recordId</elementReference>
             </value>
-        </filters>
-        <object>CaseContactRole</object>
-        <outputReference>socvCaseContacts</outputReference>
-        <queriedFields>ContactId</queriedFields>
-    </recordLookups>
+        </inputAssignments>
+        <object>OpportunityContactRole</object>
+    </recordCreates>
     <recordLookups>
         <name>flContact</name>
         <label>flContact</label>
@@ -128,7 +120,7 @@
         <locationY>102</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>flCaseContacts</targetReference>
+            <targetReference>flOppContacts</targetReference>
         </connector>
         <filters>
             <field>Id</field>
@@ -141,7 +133,33 @@
         <outputReference>sovContact</outputReference>
         <queriedFields>Id</queriedFields>
     </recordLookups>
-    <startElementReference>flContact</startElementReference>
+    <recordLookups>
+        <name>flOppContacts</name>
+        <label>flOppContacts</label>
+        <locationX>151</locationX>
+        <locationY>211</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>lOppContacts</targetReference>
+        </connector>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>OpportunityContactRole</object>
+        <outputReference>socvOppContacts</outputReference>
+        <queriedFields>ContactId</queriedFields>
+    </recordLookups>
+    <start>
+        <locationX>103</locationX>
+        <locationY>101</locationY>
+        <connector>
+            <targetReference>flContact</targetReference>
+        </connector>
+    </start>
     <variables>
         <name>contactExists</name>
         <dataType>Boolean</dataType>
@@ -153,7 +171,7 @@
         </value>
     </variables>
     <variables>
-        <name>createdCaseContactId</name>
+        <name>createdOppContactId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -174,20 +192,12 @@
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <name>socvCaseContacts</name>
+        <name>socvOppContacts</name>
         <dataType>SObject</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
-        <objectType>CaseContactRole</objectType>
-    </variables>
-    <variables>
-        <name>sovCaseContact</name>
-        <dataType>SObject</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>CaseContactRole</objectType>
+        <objectType>OpportunityContactRole</objectType>
     </variables>
     <variables>
         <name>sovContact</name>
@@ -196,5 +206,13 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <name>sovOppContact</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OpportunityContactRole</objectType>
     </variables>
 </Flow>
