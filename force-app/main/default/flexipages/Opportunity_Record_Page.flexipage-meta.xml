@@ -38,6 +38,25 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>flowNameLookup</name>
+                <value>activeContacts_Opportunity</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>fsName</name>
+                <value>Long_Form</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>titleString</name>
+                <value>Active Contact List</value>
+            </componentInstanceProperties>
+            <componentName>lwcdatatable</componentName>
+        </componentInstances>
+        <name>Facet-659f6315-3fc1-47bd-9b4f-7e742be20e95</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
             <componentName>runtime_sales_activities:activityPanel</componentName>
         </componentInstances>
         <mode>Replace</mode>
@@ -63,23 +82,19 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
-                <name>flowNameLookup</name>
-                <value>activeContacts_Opportunity</value>
+                <name>active</name>
+                <value>true</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
-                <name>fsName</name>
-                <value>Long_Form</value>
+                <name>body</name>
+                <value>Facet-659f6315-3fc1-47bd-9b4f-7e742be20e95</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
-                <name>titleString</name>
-                <value>Active Contact List</value>
+                <name>title</name>
+                <value>Data Table</value>
             </componentInstanceProperties>
-            <componentName>lwcdatatable</componentName>
+            <componentName>flexipage:tab</componentName>
         </componentInstances>
-        <name>Facet-659f6315-3fc1-47bd-9b4f-7e742be20e95</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
                 <name>active</name>
@@ -114,21 +129,6 @@
             <componentInstanceProperties>
                 <name>title</name>
                 <value>Standard.Tab.collaborate</value>
-            </componentInstanceProperties>
-            <componentName>flexipage:tab</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>active</name>
-                <value>true</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>body</name>
-                <value>Facet-659f6315-3fc1-47bd-9b4f-7e742be20e95</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>title</name>
-                <value>Data Table</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
         </componentInstances>

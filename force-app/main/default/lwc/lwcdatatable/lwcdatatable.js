@@ -63,12 +63,12 @@ export default class Lwcdatatable extends LightningElement {
                 }];
                 //this.removedFields = removedFields;
                 this.removedColumns = cols;
-                if (this.removedFields.length === 0) {
-                    this.titleString = 'Active Contact List (Permset Not Assigned)';
-                    this.buttonLabel = 'Assign Permerset';
-                } else {
+                if (!this.removedFields || this.removedFields.size === 0) {
                     this.titleString = 'Active Contact List (Permset Assigned)';
                     this.buttonLabel = 'Remove Permset';
+                } else {
+                    this.titleString = 'Active Contact List (Permset Not Assigned)';
+                    this.buttonLabel = 'Assign Permerset';
                 }
 
             } else {
