@@ -92,7 +92,7 @@
                 component.set('v.myColumns', columns);
                 if (removedFields.length === 0) {
                     component.set('v.titleString', 'Active Contact List (Permset Not Assigned)');
-                    component.set('v.buttonLabel', 'Assign Permerset');
+                    component.set('v.buttonLabel', 'Assign Permset');
                 } else {
                     component.set('v.titleString', 'Active Contact List (Permset Assigned)');
                     component.set('v.buttonLabel', 'Remove Permset');

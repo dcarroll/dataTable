@@ -68,7 +68,7 @@ export default class Lwcdatatable extends LightningElement {
                     this.buttonLabel = 'Remove Permset';
                 } else {
                     this.titleString = 'Active Contact List (Permset Not Assigned)';
-                    this.buttonLabel = 'Assign Permerset';
+                    this.buttonLabel = 'Assign Permset';
                 }
 
             } else {
