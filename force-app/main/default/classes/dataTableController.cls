@@ -88,9 +88,9 @@ public class dataTableController {
         String assigneeId = UserInfo.getUserId();
         PermissionSetAssignment permsetAssignment = getPermsetAssignment(assigneeId, permset.Id);
         if (permsetAssignment == null) {
-            return 'assigned';
-        } else {
             return 'removed';
+        } else {
+            return 'assigned';
         }
     }
 
